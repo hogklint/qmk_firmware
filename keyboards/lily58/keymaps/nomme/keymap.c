@@ -10,6 +10,7 @@ enum layer_number {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
+// TODO: Test the layout from keyboards/ergodox_ez/keymaps/skug/keymap.c
 /* QWERTY
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * | ESC  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |  +   |
@@ -40,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
  * |   §  |   !  |   "  |   #  |   ¤  |   %  |-------.    ,-------|   &  |   /  |   (  |   )  |   =  |   ?  |
  * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
- * |      |   <  |      |      |      |      |-------|    |-------|      |   _  |   +  |   {  |   }  |   '  |
+ * |      |   <  |   >  |   |  |      |      |-------|    |-------|      |   _  |   +  |   {  |   }  |   '  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI |LOWER | /Space  /       \Enter \  |RAISE |BackSP| RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
@@ -50,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _______, _______, _______, _______, _______, _______,                   _______, _______, _______,_______, _______, _______,
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
   SE_SECT, SE_EXLM, SE_DQUO, SE_HASH, SE_CURR, SE_PERC,                   SE_AMPR, SE_SLSH, SE_LPRN, SE_RPRN, SE_EQL,  SE_QUES,
-  _______, SE_LABK, _______, _______, _______, _______, _______, _______, XXXXXXX, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, SE_QUOT,
+  _______, SE_LABK, SE_RABK, SE_PIPE, _______, _______, _______, _______, XXXXXXX, KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, SE_QUOT,
                              _______, _______, _______, _______, _______,  _______, _______, _______
 ),
 /* RAISE
