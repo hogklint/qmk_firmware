@@ -1,6 +1,7 @@
 #include QMK_KEYBOARD_H
 #include <keymap_swedish.h>
 
+# define PASTE S(KC_INS)
 enum layer_number {
   _QWERTY = 0,
   _LOWER,
@@ -58,11 +59,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.                    ,-----------------------------------------.
  * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |   `  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |      |
+ * |   `  |   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  | PgUp |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * |      |      |      |      |      |      |-------.    ,-------| Left | Down |  Up  |Right |      |      |
+ * |  Ins | Home |   ¨  |   ^  |   ~  |  Del |-------.    ,-------| Left | Down |  Up  |Right |S(Ins)| PgDn |
  * |------+------+------+------+------+------|   [   |    |    ]  |------+------+------+------+------+------|
- * |      |      |   @  |   £  |   $  |   €  |-------|    |-------|      |   {  |   [  |   ]  |   }  |   \  |
+ * |  Del | End  |   @  |   £  |   $  |   €  |-------|    |-------|      |   {  |   [  |   ]  |   }  |   \  |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
  *                   | LAlt | LGUI |LOWER | /Space  /       \Enter \  |RAISE |BackSP| RGUI |
  *                   |      |      |      |/       /         \      \ |      |      |      |
@@ -71,9 +72,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_RAISE] = LAYOUT(
   _______, _______, _______, _______, _______, _______,                     _______, _______, _______, _______, _______, _______,
-  KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    _______,
-  _______, _______, _______, _______, _______, _______,                     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, XXXXXXX, XXXXXXX,
-  _______, _______, SE_AT,   SE_PND,  SE_DLR,  SE_EURO,  _______, _______,  _______, SE_LCBR, SE_LBRC, SE_RBRC, SE_RCBR, SE_BSLS,
+  KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_PGUP,
+  KC_INS,  KC_HOME, SE_DIAE, SE_CIRC, SE_TILD, KC_DEL,                      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, PASTE,   KC_PGDN,
+  KC_DEL,  KC_END,  SE_AT,   SE_PND,  SE_DLR,  SE_EURO,  _______, _______,  _______, SE_LCBR, SE_LBRC, SE_RBRC, SE_RCBR, SE_BSLS,
                              _______, _______, _______,  _______, _______,  _______, _______, _______
 ),
 /* ADJUST
