@@ -92,23 +92,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 /* RAISE
  * ,----------------------------------------.                    ,-----------------------------------------.
- * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
+ * |      |   §  |   ¨  |   £  |   €  |   ¤  |                    |      |      |   ´  |      |      |      |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Esc  | Ins  | Pscr | Menu |      |      |                    |      | PWrd |  Up  | NWrd | DLine| Bspc |
+ * |      |   !  |   @  |   {  |   }  |   /  |                    |   %  |   |  |   `  |   *  |   -  |   +  |
  * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | Tab  | LAt  | LCtl |LShift|      | Caps |-------.    ,-------|      | Left | Down | Rigth|  Del | Bspc |
+ * |      |   #  |   &  |   (  |   )  |   $  |-------.    ,-------| Left | Down |  Up  |Right |   =  |   ?  |
  * |------+------+------+------+------+------|  MUTE  |    |       |------+------+------+------+------+------|
- * |Shift | Undo |  Cut | Copy | Paste|      |-------|    |-------|      | LStr |      | LEnd |      | Shift|
+ * |      |   \  |   "  |   [  |   ]  |   '  |-------|    |-------|   <  |   >  |   ;  |   :  |   _  |      |
  * `-----------------------------------------/       /     \      \-----------------------------------------'
- *            | LGUI | LAlt | LCTR |LOWER | /Enter  /       \Space \  |RAISE | RCTR | RAlt | RGUI |
+ *            | LGUI | LGUI | Lalt |LOWER | /Space  /       \Enter \  |RAISE |BackSP| RGUI | RGUI |
  *            |      |      |      |      |/       /         \      \ |      |      |      |      |
  *            `----------------------------------'           '------''---------------------------'
  */
 [_RAISE] = LAYOUT(
-  _______, _______ , _______ , _______ , _______ , _______,                           _______,  _______  , _______,  _______ ,  _______ ,_______,
-  _______,  KC_INS,  KC_PSCR,   KC_APP,  XXXXXXX, XXXXXXX,                        KC_PGUP, KC_PRVWD,   KC_UP, KC_NXTWD,KC_DLINE, KC_BSPC,
-  _______, KC_LALT,  KC_LCTL,  KC_LSFT,  XXXXXXX, KC_CAPS,                       KC_PGDN,  KC_LEFT, KC_DOWN, KC_RGHT,  KC_DEL, KC_BSPC,
-  _______,KC_UNDO, KC_CUT, KC_COPY, KC_PASTE, XXXXXXX,  _______,       _______,  XXXXXXX, KC_LSTRT, XXXXXXX, KC_LEND,   XXXXXXX, _______,
+  _______, SE_SECT, SE_DIAE, SE_PND,  SE_EURO, SE_CURR,                     _______, _______, SE_ACUT, _______, _______, _______,
+  _______, SE_EXLM, SE_AT,   SE_LCBR, SE_RCBR, SE_SLSH,                     SE_PERC, SE_PIPE, SE_GRV,  SE_ASTR, SE_MINS, SE_PLUS,
+  _______, SE_HASH, SE_AMPR, SE_LPRN, SE_RPRN, SE_DLR,                      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, SE_EQL,  SE_QUES,
+  _______, SE_BSLS, SE_DQUO, SE_LBRC, SE_RBRC, SE_QUOT,  _______, _______,  SE_LABK, SE_RABK, SE_SCLN, SE_COLN, SE_UNDS, _______,
                          _______, _______, _______, _______, _______,       _______, _______, _______, _______, _______
 ),
 /* ADJUST
